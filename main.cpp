@@ -16,7 +16,7 @@ int main()
   sockfd = socket(AF_INET,SOCK_STREAM,0);
   seraddr.sin_family = AF_INET;
   seraddr.sin_port = htons(5566);
-  seraddr.sin_addr.s_addr = inet_addr("119.23.210.52");
+  seraddr.sin_addr.s_addr = inet_addr("127.0.0.1");
   memset(&seraddr.sin_zero,0,8);
   int rec = connect(sockfd,(struct sockaddr*)&seraddr,sizeof(struct sockaddr));
   if(rec<0)
